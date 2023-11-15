@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { MdContactPhone } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 
 const NavBar = () => {
 	return (
@@ -36,6 +37,17 @@ const NavBar = () => {
 					>
 						<MdContactPhone />
 						<span>ارتباط با ما</span>
+					</NavLink>
+					<NavLink
+						to="users"
+						className={({ isActive }) =>
+							isActive
+								? "text-[#0085a1] flex flex-row gap-4 items-center h-full"
+								: "flex flex-row gap-4 items-center"
+						}
+					>
+						<FaUsers />
+						<span>کاربران</span>
 					</NavLink>
 				</div>
 				<div>

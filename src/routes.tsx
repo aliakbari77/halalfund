@@ -3,6 +3,7 @@ import App from "./App";
 import HomePage from "./components/HomePage";
 import AboutUsPage from "./components/AboutUsPage";
 import ContactUsPage from "./components/ContactUsPage";
+import Users from "./components/Users";
 
 const routes = createBrowserRouter([
 	{
@@ -20,6 +21,10 @@ const routes = createBrowserRouter([
 			{
 				path: "contact-us",
 				element: <ContactUsPage />,
+			},
+			{
+				path: "users",
+				element: <Users />,
 			},
 		],
 	},

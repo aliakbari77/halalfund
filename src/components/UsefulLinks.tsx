@@ -14,7 +14,11 @@ const UsefulLinks = ({ links }: Props) => {
 	return (
 		<div className="grid grid-cols-2 gap-4 text-gray-300">
 			{links.map((link) => (
-				<NavLink className=" hover:text-gray-100" to={link.path}>
+				<NavLink
+					key={link.title}
+					className=" hover:text-gray-100"
+					to={link.path}
+				>
 					{link.title}
 				</NavLink>
 			))}
