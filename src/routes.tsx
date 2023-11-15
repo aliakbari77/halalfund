@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import AboutUsPage from "./components/AboutUsPage";
 import ContactUsPage from "./components/ContactUsPage";
 import Users from "./components/Users";
+import Products from "./components/Projects";
 
 const routes = createBrowserRouter([
 	{
@@ -25,6 +26,10 @@ const routes = createBrowserRouter([
 			{
 				path: "users",
 				element: <Users />,
+			},
+			{
+				path: "projects",
+				element: <Products />,
 			},
 		],
 	},

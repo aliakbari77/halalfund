@@ -6,7 +6,7 @@ import { FaUsers } from "react-icons/fa";
 
 const NavBar = () => {
 	return (
-		<div>
+		<div className="justify-start">
 			<header className="flex flex-row items-center justify-between px-6 py-4 shadow-sm">
 				<div>
 					<img
@@ -49,6 +49,18 @@ const NavBar = () => {
 						<FaUsers />
 						<span>کاربران</span>
 					</NavLink>
+					<NavLink
+						to="projects"
+						className={({ isActive }) =>
+							isActive
+								? "text-[#0085a1] flex flex-row gap-4 items-center h-full"
+								: "flex flex-row gap-4 items-center"
+						}
+					>
+						<FaUsers />
+						<span>پروژه ها</span>
+					</NavLink>
+
 				</div>
 				<div>
 					<button className="btn bg-[#0085a1] text-white flex flex-col gap-2 py-2">

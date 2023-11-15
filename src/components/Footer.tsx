@@ -36,7 +36,7 @@ const Footer = () => {
 	];
 
 	return (
-		<div className="bg-[#0085a1] fles flex-col">
+		<div className="bg-[#0085a1] fles flex-col justify-end">
 			<div className="flex flex-row justify-between px-8 py-4 text-white">
 				<div>
 					<UsefulLinks links={useFulLinks} />
