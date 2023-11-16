@@ -8,12 +8,23 @@ import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { useState } from "react";
 import LoginForm from "./LoginForm";
+import UserInfoHover from "./UserInfoHover";
 
 interface Props {
   showLogin: () => void;
 }
 
 const NavBar = ({ showLogin }: Props) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   const isAuthenticated = useSelector(
     (state: RootState) => state.auth.isAuthenticated
   );
@@ -75,12 +86,15 @@ const NavBar = ({ showLogin }: Props) => {
         </div>
         <div className="flex flex-row gap-4">
           <button
-            onClick={showLogin}
             className="btn btn-sm bg-[#0085a1] text-white flex flex-col gap-2 py-2 border-2 border-[#0085a1] hover:border-2 hover:border-[#0085a1] hover:text-[#0085a1] hover:bg-white"
+            onClick={showLogin}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <FaRegUser className="text-[1.2rem]" />
             {isAuthenticated && <span>پروفایل</span>}
             {!isAuthenticated && <span>ورود | ثبت نام</span>}
+            {isHovered && <UserInfoHover />}
           </button>
           {isAuthenticated && (
             <button className="btn btn-sm bg-[#a1006e] text-white border-2 border-[#a1006e] hover:border-2 hover:border-[#a1006e] hover:text-[#a1006e] hover:bg-white">
