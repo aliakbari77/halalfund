@@ -1,6 +1,7 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
 import ProjectCardStatus from "./ProjectCardStatus";
+import { NavLink } from "react-router-dom";
 
 const ProjectCard = () => {
   return (
@@ -22,9 +23,12 @@ const ProjectCard = () => {
         </span>
         <ProjectCardStatus />
         <div className="card-actions justify-end">
-          <button className="btn btn-md bg-[#0085a1] w-full text-white hover:text-[#0085a1] hover:bg-white hover:border-1 hover:border-[#0085a1]">
+          <NavLink
+            to="/"
+            className="btn btn-md bg-[#0085a1] w-full text-white hover:text-[#0085a1] hover:bg-white hover:border-1 hover:border-[#0085a1]"
+          >
             سرمایه گذاری
-          </button>
+          </NavLink>
         </div>
       </div>
     </div>
