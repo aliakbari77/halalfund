@@ -6,7 +6,7 @@ const ProjectCardStatus = () => {
 	return (
 		<div className="flex flex-row gap-8 items-center justify-center mt-8">
 			<div className="flex flex-col justify-center items-center gap-1 text-[#0085a1]">
-				<MdDateRange fontSize={"1.5rem"} />
+				<FaRegCheckCircle fontSize={"1.5rem"} />
 				<span className="text-[0.6rem]">1,400,000,000</span>
 				<span className="text-[0.6rem]">ریال سرمایه گذاری شده</span>
 			</div>
