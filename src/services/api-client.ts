@@ -14,6 +14,12 @@ class APIClient<T> {
 	getAll = () => {
 		return axiosInstance.get<T[]>(this.endpoint).then((res) => res.data);
 	};
+
+	get = (id: number) => {
+		return axiosInstance
+			.get<T>(this.endpoint, { params: { id } })
+			.then((res) => res.data);
+	};
 }
 
 export default APIClient;

@@ -1,7 +1,13 @@
 import { GrDocumentText } from "react-icons/gr";
 import ProjectSummary from "./ProjectSummary";
+import useProject from "../hooks/useProject";
 
 const ProjectDetails = () => {
+	const { data, isLoading, error } = useProject(1);
+
+	console.log("here");
+	console.log(data);
+
 	return (
 		<div>
 			<header className="p-[1.5rem] text-center bg-gradient-to-r from-[#0086a181] via-[#0086a136] to-[#0086a181]">

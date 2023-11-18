@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useUsers from "../hooks/useusers";
+import useUsers from "../hooks/useUsers";
 import { MdDelete } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
 
