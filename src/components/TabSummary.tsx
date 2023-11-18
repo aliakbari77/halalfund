@@ -7,13 +7,17 @@ const TabSummary = () => {
 			<div className="flex flex-row">
 				<button
 					onClick={() => setActiveTab(1)}
-					className={activeTab === 1 ? "btn-sm bg-red-500" : "btn-sm"}
+					className={
+						activeTab === 1 ? "btn-sm bg-[#0085a1] text-white rounded-t-md" : "btn-sm"
+					}
 				>
 					پلن 12 ماهه
 				</button>
 				<button
 					onClick={() => setActiveTab(2)}
-					className={activeTab === 2 ? "btn-sm bg-red-500" : "btn-sm"}
+					className={
+						activeTab === 2 ? "btn-sm bg-[#0085a1] text-white" : "btn-sm"
+					}
 				>
 					پلن 6 ماهه
 				</button>

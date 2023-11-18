@@ -87,8 +87,10 @@ const ProjectSummary = () => {
 					<div className="text-center p-[1rem] font-bold">268 نفر</div>
 				</div>
 			</div>
-			<div className="flex flex-col">
-				<header>پلن های سرمایه گذاری</header>
+			<div className="flex flex-col gap-4">
+				<header className="p-4 text-center text-[#1e7385]">
+					پلن های سرمایه گذاری
+				</header>
 				<TabSummary />
 			</div>
 		</div>
