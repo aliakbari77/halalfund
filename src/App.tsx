@@ -6,15 +6,15 @@ import { useState } from "react";
 import LoginForm from "./components/LoginForm";
 
 function App() {
-	const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<>
 			<div className="flex flex-col justify-between">
-				<NavBar showLogin={() => setIsOpen(true)}/>
+				<NavBar showLogin={() => setIsOpen(true)} />
 				<Outlet />
 				<Footer />
 			</div>
-			{isOpen && <LoginForm onClose={() => setIsOpen(false)}/>}
+			{isOpen && <LoginForm onClose={() => setIsOpen(false)} />}
 		</>
 	);
 }
